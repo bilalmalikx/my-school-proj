@@ -1,0 +1,23 @@
+/* General Footer Styling */
+footer {
+  font-size: 14px;
+}
+
+/* Social Media Icon Section */
+.social-icons i {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.2);
+}
+
+/* Quick Links List Styling */
+footer .list-unstyled li a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .list-unstyled li a:hover {
+  color: #ffb400;
+}

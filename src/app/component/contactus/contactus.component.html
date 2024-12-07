@@ -1,0 +1,125 @@
+<app-nav-bar></app-nav-bar>
+<div class="container my-5">
+  <!-- Contact Us Header -->
+  <h2 class="text-center text-primary mb-4 animate__animated animate__fadeInDown">Contact Us</h2>
+  <p class="text-center text-muted lead animate__animated animate__fadeIn">
+    We're here to assist you! Feel free to reach out to us for any inquiries, admissions, or support.
+  </p>
+
+  <!-- Contact Details Section -->
+  <div class="row mt-5 align-items-center">
+    <!-- Left Contact Information -->
+    <div class="col-md-6 animate__animated animate__fadeInLeft">
+      <h4 class="text-success">Get in Touch</h4>
+      <ul class="list-unstyled">
+        <li class="mb-3">
+          <i class="fas fa-map-marker-alt text-danger me-2"></i>
+          <strong>Address:</strong> Hawallian, Sankhata Road, Dhamthal
+        </li>
+        <li class="mb-3">
+          <i class="fas fa-phone-alt text-primary me-2"></i>
+          <strong>Call:</strong> <a href="tel:0542431001" class="text-dark">0542431001</a>
+        </li>
+        <li class="mb-3">
+          <i class="fas fa-envelope text-warning me-2"></i>
+          <strong>Email:</strong>
+          <a href="mailto:kinn.school@yahoo.com" class="text-dark">{{email}}</a>,
+          <a href="mailto:kinn.school@gmail.com" class="text-dark">{{email}}</a>
+        </li>
+      </ul>
+      <p class="text-muted">
+        We are available from <strong>Monday to Saturday</strong>, <em>8:00 AM to 4:00 PM</em>.
+      </p>
+    </div>
+
+    <!-- Right Google Map -->
+    <div class="col-md-6 text-center animate__animated animate__fadeInRight">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345081444!2d-122.41941568467958!3d37.77492967975852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064fbb07f13%3A0xd9c80093f1e7b9fa!2sLocation!5e0!3m2!1sen!2s!4v1612345678901!5m2!1sen!2s"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Additional Information -->
+  <div class="mt-5">
+    <h4 class="text-center text-primary animate__animated animate__fadeInUp">Why Contact Us?</h4>
+    <p class="text-center text-muted lead animate__animated animate__fadeInUp">
+      At <strong>Knowledge Inn High School</strong>, we value communication and collaboration. Our team is committed to
+      assisting you with:
+    </p>
+    <div class="row text-center mt-4">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-3 animate__animated animate__fadeInUp">
+        <div class="card shadow-sm hover-animate">
+          <div class="card-body">
+            <h5 class="card-title text-success"><i class="fas fa-info-circle me-2"></i>General Inquiries</h5>
+            <p class="card-text">Get answers to your questions about our school, facilities, and curriculum.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-3 animate__animated animate__fadeInUp">
+        <div class="card shadow-sm hover-animate">
+          <div class="card-body">
+            <h5 class="card-title text-primary"><i class="fas fa-user-check me-2"></i>Admissions</h5>
+            <p class="card-text">Learn about the admission process, fee structure, and enrollment criteria.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-3 animate__animated animate__fadeInUp">
+        <div class="card shadow-sm hover-animate">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="fas fa-headset me-2"></i>Support</h5>
+            <p class="card-text">Reach out for assistance or share feedback to help us improve.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="text-center mt-5 animate__animated animate__zoomIn">
+    <p class="lead text-muted">
+      "Let’s work together to build a brighter future for our children."
+    </p>
+    <h4 class="text-success">We're just a call or email away!</h4>
+  </div>
+</div>
+<!-- Contact Us Section -->
+<div class="container my-5">
+  <h2 class="text-center text-primary">If you want to send the message via email</h2>
+
+  <!-- Adjusted Width with a Bootstrap Column -->
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-8" style="max-width: 500px;">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Your Name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Your Email" required />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
+
+

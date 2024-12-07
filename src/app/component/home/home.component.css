@@ -1,0 +1,235 @@
+/* Hero Section */
+.hero-section {
+  position: relative;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.1);
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain; /* Ensures the full image is visible */
+}
+.hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.1);
+}
+
+.initiative-box {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.initiative-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+img.shadow-lg {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+img.rounded {
+  border-radius: 10px;
+}
+
+
+img.shadow-lg {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+img.rounded {
+  border-radius: 10px;
+}
+
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/* Initiative Boxes */
+.initiative-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.initiative-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Wrapper */
+.video-wrapper iframe {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Fixing the issue with the image size */
+.ms-3 {
+  padding-left: 60px; /* Removed excessive padding */
+  object-fit: cover;
+  height: 40%; /* Ensures the image takes full height of the column */
+  width: 40%; /* Ensures the image takes full width of the column */
+  border-radius: 10px; /* Optional: Add border radius for rounded corners */
+
+}
+
+/* If you want to apply some space between text and image, you can adjust margin as follows */
+.col-md-6 img {
+  margin-left: 15px; /* Small margin to the left for spacing */
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+/* General Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.section-title:hover {
+  color: #0056b3;
+}
+
+/* Main container for info box layout */
+.info-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Styled box for vision/mission */
+.info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Content text section */
+.text-content {
+  flex: 1 1 50%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Image section */
+.image-content {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+/* Text Box Styling */
+.text-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.text-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+

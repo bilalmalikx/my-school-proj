@@ -1,0 +1,36 @@
+.list-group-item {
+  transition: transform 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  transform: scale(1.05);
+}
+.hover-scale {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #28a745;
+  padding: 10px;
+}
+.hover-scale {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+.card-shadow {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.animate__fadeIn {
+  animation: fadeIn 1.5s ease-in;
+}

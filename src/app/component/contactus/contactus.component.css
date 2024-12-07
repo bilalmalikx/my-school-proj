@@ -1,0 +1,17 @@
+/* General Hover Effect */
+.hover-animate:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Button Animations on Hover */
+.btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Styling the map iframe */
+iframe {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}

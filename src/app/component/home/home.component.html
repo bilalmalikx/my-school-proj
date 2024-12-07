@@ -1,0 +1,240 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<app-nav-bar></app-nav-bar>
+
+<!-- Main Hero Section -->
+<div class="hero-section text-center text-white position-relative object-fit: cover">
+  <img src="assets/images/school-campus.jpg" alt="School Campus" class="hero-image" data-bs-toggle="modal"
+    data-bs-target="#imageModal" />
+  <div class="hero-overlay"></div>
+</div>
+
+<!-- Modal to Show Full Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">School Campus</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/school-campus.jpg" alt="School Campus" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Principal's Vision Section -->
+<div class="container my-5 animate__animated animate__fadeIn">
+  <h2 class="text-center mb-4">Principal's Vision</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6 animate__animated animate__fadeInLeft animate__delay-1s">
+      <p>
+        "As the principal of Knowledge Inn High School, I, Ahmad Farooq, envision a school environment where
+        cleanliness, innovation, and community spirit thrive. We aim to nurture students with values of respect,
+        responsibility, and academic excellence. My goal is to ensure every child feels empowered to achieve
+        greatness."
+      </p>
+      <p>
+        Together, let's build a future filled with opportunities for our students. Our commitment to maintaining
+        a healthy, clean, and inclusive environment drives our initiatives every day.
+      </p>
+    </div>
+    <div class="col-md-6 animate__animated animate__fadeInRight animate__delay-2s">
+      <img src="assets/images/principle.jpg" alt="Principal" class="img-fluid ms-3 shadow-lg rounded" />
+    </div>
+  </div>
+</div>
+
+<!-- Key Initiatives Section -->
+<div class="container mt-5 animate__animated animate__fadeInUp">
+  <h2 class="text-center">Key Initiatives</h2>
+  <div class="row text-center">
+    <div class="col-md-4 animate__animated animate__fadeIn animate__delay-1s">
+      <div class="initiative-box shadow-lg">
+        <i class="fas fa-leaf fa-3x text-success"></i>
+        <h4 class="mt-3">Cleanliness Drive</h4>
+        <p>We prioritize a clean and green environment, teaching students the importance of hygiene and sustainability.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4 animate__animated animate__fadeIn animate__delay-2s">
+      <div class="initiative-box shadow-lg">
+        <i class="fas fa-laptop fa-3x text-primary"></i>
+        <h4 class="mt-3">Digital Learning</h4>
+        <p>Equipping classrooms with modern technology to enhance learning and foster digital literacy.</p>
+      </div>
+    </div>
+    <div class="col-md-4 animate__animated animate__fadeIn animate__delay-3s">
+      <div class="initiative-box shadow-lg">
+        <i class="fas fa-hands-helping fa-3x text-warning"></i>
+        <h4 class="mt-3">Community Engagement</h4>
+        <p>Encouraging students to participate in community service and build a sense of empathy and teamwork.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Computer Room Section -->
+<div class="container my-5 animate__animated animate__fadeInUp animate__delay-2s">
+  <h2 class="text-center mb-4">Computer Room</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <div class="text-box shadow-lg rounded p-3">
+        <p>
+          The **Computer Room** at Knowledge Inn High School is equipped with the latest computers, internet access,
+          and essential software for students to learn programming, web development, and digital skills that will prepare
+          them for the future.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="assets/images/computer-room.jpg" alt="Computer Room" class="img-fluid shadow-lg rounded" />
+    </div>
+  </div>
+</div>
+
+<!-- Chemistry Laboratory Section -->
+<div class="container my-5 animate__animated animate__fadeInUp animate__delay-1s">
+  <h2 class="text-center mb-4">Chemistry Laboratory</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <div class="text-box shadow-lg rounded p-3">
+        <p>
+          Our **Chemistry Laboratory** is a state-of-the-art facility designed to provide students with hands-on
+          experience in chemical experiments. It is equipped with the latest instruments and materials to foster
+          scientific curiosity and understanding.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="assets/images/chemistry-lab.jpg" alt="Chemistry Laboratory" class="img-fluid shadow-lg rounded" />
+    </div>
+  </div>
+</div>
+
+<!-- Our Vision Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Our Vision</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="text-box shadow-lg rounded p-3">
+        <p>
+          Our vision is to create a nurturing and innovative learning environment where students are empowered to explore their full potential.
+          We strive to integrate technology, values, and creativity to ensure that every child develops the confidence to tackle challenges
+          and embrace lifelong learning.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6" style="cursor: pointer;">
+      <img src="assets/images/vision.jpg" alt="Our Vision" class="img-fluid shadow-lg rounded" [routerLink]="['/our-vision']"/>
+    </div>
+  </div>
+</div>
+
+<!-- Our Mission Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Our Mission</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="text-box shadow-lg rounded p-3">
+        <p>
+          Our mission is to provide a quality education that emphasizes discipline, values, innovation, and academic excellence.
+          We aim to foster a collaborative learning environment that empowers students with knowledge and equips them to make meaningful contributions to their communities.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="assets/images/mission.jpg" alt="Our Mission" class="img-fluid shadow-lg rounded" />
+    </div>
+  </div>
+</div>
+
+
+
+<!-- About Us Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">About Us</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <p>
+        Knowledge Inn High School is committed to nurturing young minds with academic excellence,
+        moral values, and a passion for lifelong learning. With state-of-the-art facilities and a dedicated staff,
+        we aim to inspire innovation and creativity in every student.
+      </p>
+    </div>
+    <div class="col-md-6" style="cursor: pointer;">
+      <img src="assets/images/aboutUs.jpg" alt="About Us" class="img-fluid shadow-lg rounded" [routerLink]="['/about-us']"/>
+    </div>
+  </div>
+</div>
+
+<!-- Achievements Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Our Achievements</h2>
+  <div class="row text-center">
+    <div class="col-md-4">
+      <i class="fas fa-trophy fa-3x text-warning"></i>
+      <h4 class="mt-3">Excellence in Academics</h4>
+      <p>Ranked among the top schools in academic performance for the past 5 years.</p>
+    </div>
+    <div class="col-md-4">
+      <i class="fas fa-medal fa-3x text-primary"></i>
+      <h4 class="mt-3">Sports Champions</h4>
+      <p>Winners of the inter-school sports championship for 3 consecutive years.</p>
+    </div>
+    <div class="col-md-4">
+      <i class="fas fa-globe fa-3x text-success"></i>
+      <h4 class="mt-3">Community Service</h4>
+      <p>Active participation in social initiatives, impacting over 10,000 lives.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Gallery</h2>
+
+  <!-- Carousel Container -->
+  <div class="carousel-container">
+
+    <!-- Dynamically Show Images -->
+    <div class="carousel-inner">
+      <div
+        *ngFor="let image of images; let i = index"
+        [class.active]="currentIndex === i"
+        class="carousel-item"
+      >
+        <img [src]="image.src" class="d-block w-100" [alt]="image.alt" />
+      </div>
+    </div>
+
+    <!-- Carousel Navigation Buttons -->
+    <button
+      class="carousel-control-prev"
+      (click)="prevImage()"
+    >
+      &#10094;
+    </button>
+    <button
+      class="carousel-control-next"
+      (click)="nextImage()"
+    >
+      &#10095;
+    </button>
+
+  </div>
+</div>
+
+<!-- Video Section -->
+<div class="container mt-5 animate__animated animate__fadeInUp animate__delay-3s">
+  <h2 class="text-center">A Glimpse of Knowledge Inn</h2>
+  <div class="video-wrapper my-4">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/sample-video" title="School Highlights"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>

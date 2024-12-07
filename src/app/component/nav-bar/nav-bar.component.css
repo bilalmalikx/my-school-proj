@@ -1,0 +1,140 @@
+/* Transparent navbar with a slight dark overlay */
+.navbar {
+  background-color: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  padding: 0 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-left: 15px; /* Space between logo and text */
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.2); /* Zoom animation */
+}
+
+/* Navbar Links */
+.nav-link.nav-animated {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link.nav-animated:hover {
+  color: #ffd700; /* Gold text on hover */
+  transform: translateY(-2px);
+}
+
+.nav-link.nav-animated::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #66bb6a; /* Green underline */
+  border-radius: 4px;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-link.nav-animated:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Login Button */
+.btn-outline-light {
+  border-color: white;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Sign Up Button */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+  background-color: #218838 !important;
+  box-shadow: 0px 4px 12px rgba(72, 239, 144, 0.6);
+  transform: scale(1.05); /* Slight enlargement */
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler:hover {
+  transform: rotate(90deg);
+}
+
+/* Navbar Scroll Animation */
+.navbar.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.navbar.sticky-top.scrolled {
+  padding: 5px 50px; /* Reduce padding when scrolled */
+}
+
+.navbar.sticky-top.scrolled .navbar-brand {
+  font-size: 1.5rem; /* Adjust brand size when scrolled */
+}
+
+.navbar.sticky-top.scrolled .navbar-brand img {
+  transform: scale(0.9); /* Shrink logo when scrolled */
+}
+
+.navbar.sticky-top.scrolled .nav-link.nav-animated {
+  color: #ffd700; /* Change color on scroll */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand img {
+    height: 35px;
+  }
+}
