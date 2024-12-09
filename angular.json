@@ -71,18 +71,6 @@
             "buildTarget": "angular:build"
           }
         },
-        "budgets": [
-          {
-            "type": "initial",
-            "maximumWarning": "2mb",
-            "maximumError": "5mb"
-          },
-          {
-            "type": "anyComponentStyle",
-            "maximumWarning": "2kb",
-            "maximumError": "3kb"
-          }
-        ],
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {

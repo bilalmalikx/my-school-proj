@@ -1,0 +1,9 @@
+<div *ngFor="let result of results$ | async">
+  <div>
+    <p><strong>Username:</strong> {{ result.username }}</p>
+    <p><strong>Roll Number:</strong> {{ result.rollNumber }}</p>
+    <p><strong>Score:</strong> {{ result.score }}</p>
+    <button (click)="editResult(result)">Edit Score</button>
+    <hr />
+  </div>
+</div>

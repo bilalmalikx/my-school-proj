@@ -7,6 +7,8 @@ import { AboutusComponent } from './component/aboutus/aboutus.component';
 import { ContactusComponent } from './component/contactus/contactus.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { EmailLoginComponentComponent } from './component/email-login-component/email-login-component.component';
+import { ResultCardComponent } from './component/result-card/result-card.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +18,9 @@ export const routes: Routes = [
   { path: 'about-us', component: AboutusComponent },
   { path: 'contact-us', component: ContactusComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent }
+  { path: 'signup', component: SignupComponent },
+  { path: 'Email', component: EmailLoginComponentComponent },
+  { path: 'results', component: ResultCardComponent },
 ];
 
 
