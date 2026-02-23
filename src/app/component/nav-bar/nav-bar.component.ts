@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,22 +10,24 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-  // Scroll function to add 'scrolled' class
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+
+  @HostListener('window:scroll', [])
   onScroll() {
-    const navbar = document.querySelector('.navbar') as HTMLElement;
+    const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
+      navbar?.classList.add('scrolled');
     } else {
-      navbar.classList.remove('scrolled');
+      navbar?.classList.remove('scrolled');
     }
-  }
-
-  // Initialize scroll listener
-  ngOnInit(): void {
-    window.addEventListener('scroll', this.onScroll);
-  }
-
-  ngOnDestroy(): void {
-    window.removeEventListener('scroll', this.onScroll);
   }
 }
