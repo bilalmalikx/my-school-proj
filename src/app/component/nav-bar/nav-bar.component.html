@@ -1,59 +1,25 @@
-<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
-  <div class="container-fluid">
+<nav class="navbar">
 
-    <!-- Brand -->
-    <a class="navbar-brand d-flex align-items-center" routerLink="/">
-      <span class="brand-text">Knowledge Inn</span>
-      <img src="assets/images/banner.jpg" alt="Logo" class="logo-img ms-2"/>
-    </a>
-
-    <!-- Toggler -->
-    <button class="navbar-toggler" type="button" (click)="toggleMenu()">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Menu -->
-    <div class="navbar-collapse"
-         [ngClass]="{ 'collapse': !isMenuOpen, 'show': isMenuOpen }">
-
-      <ul class="navbar-nav ms-auto">
-
-        <li class="nav-item">
-          <a class="nav-link"
-             routerLink="/home"
-             routerLinkActive="active-link"
-             (click)="closeMenu()">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link"
-             routerLink="/our-mission"
-             routerLinkActive="active-link"
-             (click)="closeMenu()">Our Mission</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link"
-             routerLink="/our-vision"
-             routerLinkActive="active-link"
-             (click)="closeMenu()">Our Vision</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link"
-             routerLink="/about-us"
-             routerLinkActive="active-link"
-             (click)="closeMenu()">About Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link"
-             routerLink="/contact-us"
-             routerLinkActive="active-link"
-             (click)="closeMenu()">Contact Us</a>
-        </li>
-
-      </ul>
-    </div>
+  <!-- Logo -->
+  <div class="logo">
+    <span>Knowledge Inn</span>
+    <img src="assets/images/banner.jpg" alt="Logo" />
   </div>
+
+  <!-- Toggler -->
+  <div class="toggle-btn" (click)="toggleMenu()">
+    <div [class.active]="isMenuOpen"></div>
+  </div>
+
+  <!-- Menu -->
+  <ul class="nav-links" [class.active]="isMenuOpen">
+
+    <li><a routerLink="/home" (click)="closeMenu()">Home</a></li>
+    <li><a routerLink="/our-mission" (click)="closeMenu()">Our Mission</a></li>
+    <li><a routerLink="/our-vision" (click)="closeMenu()">Our Vision</a></li>
+    <li><a routerLink="/about-us" (click)="closeMenu()">About Us</a></li>
+    <li><a routerLink="/contact-us" (click)="closeMenu()">Contact Us</a></li>
+
+  </ul>
+
 </nav>

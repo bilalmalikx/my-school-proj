@@ -1,140 +1,210 @@
-/* Transparent navbar with a slight dark overlay */
+/* ================================
+   GLOBAL NAVBAR STYLING
+================================ */
+
 .navbar {
-  background-color: transparent;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  padding: 0 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  font-family: 'Poppins', sans-serif;
-  height: 80px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-
-
-
-/* Navbar Brand */
-.navbar-brand {
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: white;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand img {
-  height: 40px;
-  margin-left: 15px; /* Space between logo and text */
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-brand:hover img {
-  transform: scale(1.2); /* Zoom animation */
-}
-
-/* Navbar Links */
-.nav-link.nav-animated {
-  position: relative;
-  color: white;
-  text-decoration: none;
-  padding: 8px 15px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-link.nav-animated:hover {
-  color: #ffd700; /* Gold text on hover */
-  transform: translateY(-2px);
-}
-
-.nav-link.nav-animated::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background-color: #66bb6a; /* Green underline */
-  border-radius: 4px;
-  transition: width 0.4s ease-in-out;
-}
-
-.nav-link.nav-animated:hover::after {
-  width: 100%;
-}
-
-.nav-link.active {
-  color: #ffd700;
-  font-weight: bold;
-}
-
-/* Login Button */
-.btn-outline-light {
-  border-color: white;
-  color: white;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-outline-light:hover {
-  background-color: white !important;
-  color: black !important;
-}
-
-/* Sign Up Button */
-.btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-success:hover {
-  background-color: #218838 !important;
-  box-shadow: 0px 4px 12px rgba(72, 239, 144, 0.6);
-  transform: scale(1.05); /* Slight enlargement */
-}
-
-/* Navbar Toggler */
-.navbar-toggler {
-  border: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-toggler:hover {
-  transform: rotate(90deg);
-}
-
-/* Navbar Scroll Animation */
-.navbar.sticky-top {
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   position: sticky;
   top: 0;
-  z-index: 1030;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
-.navbar.sticky-top.scrolled {
-  padding: 5px 50px; /* Reduce padding when scrolled */
+/* ================================
+   LOGO
+================================ */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover img {
+    transform: rotate(360deg) scale(1.1);
+  }
 }
 
-.navbar.sticky-top.scrolled .navbar-brand {
-  font-size: 1.5rem; /* Adjust brand size when scrolled */
+/* ================================
+   NAV LINKS
+================================ */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  transition: all 0.4s ease;
+
+  li {
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #00f5a0;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.4s ease;
+    }
+
+    &:hover {
+      color: #00f5a0;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
 }
 
-.navbar.sticky-top.scrolled .navbar-brand img {
-  transform: scale(0.9); /* Shrink logo when scrolled */
+/* ================================
+   DROPDOWN
+================================ */
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #1c1c1c;
+  list-style: none;
+  padding: 10px 0;
+  width: 180px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+
+  li {
+    padding: 10px 20px;
+  }
+
+  a {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  a:hover {
+    color: #00f5a0;
+  }
 }
 
-.navbar.sticky-top.scrolled .nav-link.nav-animated {
-  color: #ffd700; /* Change color on scroll */
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-/* Responsive Adjustments */
+/* ================================
+   TOGGLE BUTTON
+================================ */
+
+.toggle-btn {
+  display: none;
+  cursor: pointer;
+
+  div {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    position: relative;
+    transition: all 0.4s ease;
+  }
+
+  div::before,
+  div::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.4s ease;
+  }
+
+  div::before {
+    top: -8px;
+  }
+
+  div::after {
+    top: 8px;
+  }
+
+  div.active {
+    background: transparent;
+  }
+
+  div.active::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  div.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
 @media (max-width: 992px) {
-  .navbar {
-    padding: 10px 15px;
+
+  .toggle-btn {
+    display: block;
   }
 
-  .nav-link {
-    font-size: 1.2rem;
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #111;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
   }
 
-  .navbar-brand img {
-    height: 35px;
+  .nav-links.active {
+    max-height: 600px;
+    padding: 25px 0;
+    transition: max-height 0.5s ease;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 10px;
+    background: #222;
+    width: 90%;
   }
 }

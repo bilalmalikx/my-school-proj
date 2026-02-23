@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit, OnDestroy {
 
   isMenuOpen = false;
 
@@ -21,13 +21,20 @@ export class NavBarComponent {
     this.isMenuOpen = false;
   }
 
-  @HostListener('window:scroll', [])
-  onScroll() {
-    const navbar = document.querySelector('.navbar');
+  onScroll = () => {
+    const navbar = document.querySelector('.navbar') as HTMLElement;
     if (window.scrollY > 50) {
       navbar?.classList.add('scrolled');
     } else {
       navbar?.classList.remove('scrolled');
     }
+  };
+
+  ngOnInit(): void {
+    window.addEventListener('scroll', this.onScroll);
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('scroll', this.onScroll);
   }
 }
