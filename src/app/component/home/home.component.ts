@@ -25,9 +25,10 @@ export class HomeComponent {
 
   // Array of images
   images = [
-    { src: 'assets/images/banner.jpg', alt: 'Gallery Image 1' },
-    { src: 'assets/images/admission.jpg', alt: 'Gallery Image 2' },
-    { src: 'assets/images/school-campus.jpg', alt: 'Gallery Image 3' },
+    { src: 'assets/images/computerroom.jpg', alt: 'Gallery Image 1' },
+    { src: 'assets/images/chemistrylab.jpg', alt: 'Gallery Image 2' },
+    { src: 'assets/images/admission.jpg', alt: 'Gallery Image 3' },
+    { src: 'assets/images/school-campus.jpg', alt: 'Gallery Image 4' },
   ];
 
   // Move to the next image in the carousel
