@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { CommonModule } from '@angular/common';
@@ -11,6 +11,28 @@ import { RouterLink } from '@angular/router';
   templateUrl: './contactus.component.html',
   styleUrl: './contactus.component.css'
 })
-export class ContactusComponent {
+export class ContactusComponent implements AfterViewInit {
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    const elements = this.el.nativeElement.querySelectorAll('.scroll-animate');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              'animate__animated',
+              'animate__fadeInUp',
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    elements.forEach((el: Element) => observer.observe(el));
+  }
   email:string = "kinn.school@yahoo.com";
 }
