@@ -1,11 +1,9 @@
-
 <app-nav-bar></app-nav-bar>
 
 <!-- Main Hero Section -->
 <div class="hero-section text-center text-white position-relative">
   <img src="assets/images/school-campus.jpg" alt="School Campus" class="hero-image" data-bs-toggle="modal"
     data-bs-target="#imageModal" />
-  <!-- <div class="hero-overlay"></div> -->
 </div>
 
 <!-- Modal to Show Full Image -->
@@ -24,10 +22,10 @@
 </div>
 
 <!-- Principal's Vision Section -->
-<div class="container my-5 animate__animated animate__fadeIn">
+<div class="container my-5 scroll-animate">
   <h2 class="text-center mb-4">Principal's Vision</h2>
   <div class="row align-items-center">
-    <div class="col-md-6 animate__animated animate__fadeInLeft animate__delay-1s">
+    <div class="col-md-6 scroll-animate">
       <p>
         "As the principal of Knowledge Inn High School, I, Ahmad Farooq, envision a school environment where
         cleanliness, innovation, and community spirit thrive. We aim to nurture students with values of respect,
@@ -39,17 +37,17 @@
         a healthy, clean, and inclusive environment drives our initiatives every day.
       </p>
     </div>
-    <div class="col-md-6 animate__animated animate__fadeInRight animate__delay-2s">
+    <div class="col-md-6 scroll-animate">
       <img src="assets/images/principle.jpg" alt="Principal" class="img-fluid ms-3 shadow-lg rounded" />
     </div>
   </div>
 </div>
 
 <!-- Key Initiatives Section -->
-<div class="container mt-5 animate__animated animate__fadeInUp">
+<div class="container mt-5 scroll-animate">
   <h2 class="text-center">Key Initiatives</h2>
   <div class="row text-center">
-    <div class="col-md-4 animate__animated animate__fadeIn animate__delay-1s">
+    <div class="col-md-4 scroll-animate">
       <div class="initiative-box shadow-lg">
         <i class="fas fa-leaf fa-3x text-success"></i>
         <h4 class="mt-3">Cleanliness Drive</h4>
@@ -57,14 +55,14 @@
         </p>
       </div>
     </div>
-    <div class="col-md-4 animate__animated animate__fadeIn animate__delay-2s">
+    <div class="col-md-4 scroll-animate">
       <div class="initiative-box shadow-lg">
         <i class="fas fa-laptop fa-3x text-primary"></i>
         <h4 class="mt-3">Digital Learning</h4>
         <p>Equipping classrooms with modern technology to enhance learning and foster digital literacy.</p>
       </div>
     </div>
-    <div class="col-md-4 animate__animated animate__fadeIn animate__delay-3s">
+    <div class="col-md-4 scroll-animate">
       <div class="initiative-box shadow-lg">
         <i class="fas fa-hands-helping fa-3x text-warning"></i>
         <h4 class="mt-3">Community Engagement</h4>
@@ -75,7 +73,7 @@
 </div>
 
 <!-- Computer Room Section -->
-<div class="container my-5 animate__animated animate__fadeInUp animate__delay-2s">
+<div class="container my-5 scroll-animate">
   <h2 class="text-center mb-4">Computer Room</h2>
   <div class="row align-items-center">
     <div class="col-md-6">
@@ -94,7 +92,7 @@
 </div>
 
 <!-- Chemistry Laboratory Section -->
-<div class="container my-5 animate__animated animate__fadeInUp animate__delay-1s">
+<div class="container my-5 scroll-animate">
   <h2 class="text-center mb-4">Chemistry Laboratory</h2>
   <div class="row align-items-center">
     <div class="col-md-6">
@@ -113,7 +111,7 @@
 </div>
 
 <!-- Our Vision Section -->
-<div class="container my-5">
+<div class="container my-5 scroll-animate">
   <h2 class="text-center mb-4">Our Vision</h2>
   <div class="row">
     <div class="col-md-6">
@@ -132,7 +130,7 @@
 </div>
 
 <!-- Our Mission Section -->
-<div class="container my-5">
+<div class="container my-5 scroll-animate">
   <h2 class="text-center mb-4">Our Mission</h2>
   <div class="row">
     <div class="col-md-6">
@@ -149,10 +147,8 @@
   </div>
 </div>
 
-
-
 <!-- About Us Section -->
-<div class="container my-5">
+<div class="container my-5 scroll-animate">
   <h2 class="text-center mb-4">About Us</h2>
   <div class="row">
     <div class="col-md-6">
@@ -169,7 +165,7 @@
 </div>
 
 <!-- Achievements Section -->
-<div class="container my-5">
+<div class="container my-5 scroll-animate">
   <h2 class="text-center mb-4">Our Achievements</h2>
   <div class="row text-center">
     <div class="col-md-4">
@@ -191,7 +187,7 @@
 </div>
 
 <!-- Gallery Section -->
-<div class="container my-5">
+<div class="container my-5 scroll-animate">
   <h2 class="text-center mb-4">Gallery</h2>
 
   <!-- Carousel Container -->
@@ -209,24 +205,14 @@
     </div>
 
     <!-- Carousel Navigation Buttons -->
-    <button
-      class="carousel-control-prev"
-      (click)="prevImage()"
-    >
-      &#10094;
-    </button>
-    <button
-      class="carousel-control-next"
-      (click)="nextImage()"
-    >
-      &#10095;
-    </button>
+    <button class="carousel-control-prev" (click)="prevImage()">&#10094;</button>
+    <button class="carousel-control-next" (click)="nextImage()">&#10095;</button>
 
   </div>
 </div>
 
 <!-- Video Section -->
-<div class="container mt-5 animate__animated animate__fadeInUp animate__delay-3s">
+<div class="container mt-5 scroll-animate">
   <h2 class="text-center">A Glimpse of Knowledge Inn</h2>
   <div class="video-wrapper my-4">
     <iframe width="100%" height="400" src="https://www.youtube.com/embed/sample-video" title="School Highlights"
